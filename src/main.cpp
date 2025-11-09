@@ -5,7 +5,6 @@
 #include <vector>
 #include <filesystem>
 
-#include "VisualizationUtils.h"
 // 题目：
 // 在二值图像中，有多个相互连通的区域，请写一程序将所有的连通域提取出来，并显示出提取的效果（每个连通域用不同颜色显示）
 // 要求：
@@ -42,7 +41,7 @@ int main(int argc, char** argv) {
     auto results = ComponentEvaluator::evaluate(binary, detectors);
 
 
-    std::cout << "📊 评估结果：" << std::endl;
+    std::cout << "评估结果：" << std::endl;
     std::cout << "------------------------------------------------------" << std::endl;
     std::cout << "算法名称\t\t连通域数\t\t耗时(ms)\t\t与基准一致率\tmeanIoU" << std::endl;
     std::cout << "------------------------------------------------------" << std::endl;
@@ -58,7 +57,7 @@ int main(int argc, char** argv) {
     for (auto& r : results) {
         std::string colorPath = r.name + "_color.png";
         cv::imwrite(colorPath, r.color);
-        std::cout << "✅ 结果已保存: " << colorPath << std::endl;
+        std::cout << "结果已保存: " << colorPath << std::endl;
     }
     return 0;
 }

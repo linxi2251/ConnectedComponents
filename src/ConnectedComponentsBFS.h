@@ -1,6 +1,5 @@
 ﻿#pragma once
 #include "IComponentDetector.h"
-#include <vector>
 
 class ConnectedComponentsBFS : public IComponentDetector {
 public:

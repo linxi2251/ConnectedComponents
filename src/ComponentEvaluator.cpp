@@ -1,8 +1,6 @@
 #include "ComponentEvaluator.h"
 #include "VisualizationUtils.h"
 #include <opencv2/opencv.hpp>
-#include <iostream>
-#include <iomanip>
 #include <vector>
 #include <unordered_map>
 
