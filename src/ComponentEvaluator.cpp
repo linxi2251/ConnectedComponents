@@ -1,4 +1,4 @@
-#include "ComponentEvaluator.h"
+﻿#include "ComponentEvaluator.h"
 #include "VisualizationUtils.h"
 #include <opencv2/opencv.hpp>
 #include <vector>
@@ -6,7 +6,6 @@
 
 using namespace cv;
 using namespace std;
-// 基于整数标签矩阵的像素一致率计算（避免彩色图多通道导致 countNonZero 断言失败）
 static Mat remapToMatch(const Mat& refLabels, const Mat& testLabels) {
     CV_Assert(refLabels.size() == testLabels.size());
     CV_Assert(refLabels.type() == CV_32S && testLabels.type() == CV_32S);

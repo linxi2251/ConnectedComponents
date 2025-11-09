@@ -2,5 +2,5 @@ build
 .idea
 .cache
 .vscode
-bin/*.png
+bin
 cmake-build*

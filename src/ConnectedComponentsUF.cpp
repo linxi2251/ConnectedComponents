@@ -1,4 +1,4 @@
-#include "ConnectedComponentsUF.h"
+﻿#include "ConnectedComponentsUF.h"
 #include <iostream>
 #include <map>
 
@@ -7,7 +7,7 @@ using namespace std;
 
 cv::Mat ConnectedComponentsUF::detect(const cv::Mat& binary, int minSize) {
     if (binary.empty() || binary.type() != CV_8UC1) {
-        cerr << "❌ 输入必须为单通道二值图像" << endl;
+        cerr << "输入必须为单通道二值图像" << endl;
         return Mat();
     }
 

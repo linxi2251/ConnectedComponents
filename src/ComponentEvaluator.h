@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include "IComponentDetector.h"
 #include <vector>
@@ -10,8 +10,7 @@ public:
         int numComponents;
         double timeMs;
         double pixelAccuracy;
-        double meanIoU; // 与基准算法的平均IoU（组件级）
-        // 原始连通域标签（CV_32S），用于评估
+        double meanIoU;
         cv::Mat labels;
         cv::Mat color;
     };
