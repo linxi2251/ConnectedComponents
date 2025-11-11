@@ -23,11 +23,9 @@ int main(int argc, char** argv) {
         return -1;
     }
 
-    // 预处理：去噪 + 自适应阈值
-    cv::Mat blurred, binary;
-    cv::GaussianBlur(gray, blurred, cv::Size(5, 5), 0);
-    cv::adaptiveThreshold(blurred, binary, 255, cv::ADAPTIVE_THRESH_MEAN_C, cv::THRESH_BINARY, 21, -10);
-
+    // 预处理：二值化
+    cv::Mat binary;
+    cv::threshold(gray, binary, 127, 255, cv::THRESH_BINARY);
     // 形态学闭运算，填充空洞、连接断裂区域
     cv::Mat kernel = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(3, 3));
     cv::morphologyEx(binary, binary, cv::MORPH_CLOSE, kernel);
